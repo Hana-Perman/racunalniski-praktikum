@@ -17,6 +17,28 @@ body {
     margin: auto;
     /*  Obojestranska poravnava besedila    */
     text-align: justify;
+    /*  Barva poudarka za elemente s tekstovno poudarjenostjo  */
+    h1 {text-emphasis-color: #330066;}
+    h2 {
+    margin-top: 2em;
+    border-top: 1px solid #AAAAAA;
+    padding-top: 0.5em;  /* namesto 2em */
+    }
+
+    /*  Razdelek z id-jem uvod  */
+    #uvod {
+    padding: 2em;
+    background-color: rgba(51, 0, 102, 0.1);
+}
+
+   .slika {
+    font-size: 0.9em;
+    width: 40%;
+    text-align: left;
+    float: right;
+    margin-left: 2em;
+}
+
 }
 
 /*  Odstranimo podčrtovanje povezav in outline (ta se včasih pokaže kot kvadratek okrog povezave)  */
