@@ -21,6 +21,26 @@
 \theoremstyle{proof}
 \newtheorem{izrekdokaz}{Dokaz}
 
+\newenvironment{dokazovanje}{% 
+\begin{proof}[Dokaz izreka]%
+   }{%
+      \end{proof}%
+}
+
+
+
+\newenvironment{magic}[1]
+{\begin{table}
+\caption{Magični kvadrat reda #1} %   
+\centering
+\label{table:mag#1}
+\begin{tabular}{|*{#1}{c|}}\hline
+}{
+\end{tabular}
+\end{table}
+}
+
+
 
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -86,19 +106,18 @@ Prirejeno iz virov:
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
 \end{definicija}
 
-Primer magičnega kvadrata reda 3 je prikazan v tabeli ?!?.
+Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}.
 
-\begin{table}
-\caption{Magični kvadrat reda 3}    
-\label{table:mag3}
-\centering
-\begin{tabular}{|c|c|c|}\hline
+\begin{magic}{3}
+%\caption{Magični kvadrat reda 3}    
+%\centering
+%\begin{tabular}{|*{3}{c|}}\hline
    8 & 1 & 6 \\\hline
    3 & 5 & 7 \\\hline
    4 & 9 & 2 \\\hline   
-\end{tabular}
+%\end{tabular}
+\end{magic}
 
-\end{table}
 \begin{definicija}
    Magični kvadrat reda $n$ je \pojem{normalen}, če v njem nastopajo števila
    \begin{equation}
@@ -108,7 +127,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli ?!?.
    \end{equation}
 \end{definicija}
 
-Magični kvadrat v tabeli ?!? je normalen.
+Magični kvadrat v tabeli \ref{table:mag3} je normalen.
 To je tudi najmanjši netrivialen normalen magični kvadrat.
 Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil.
 
@@ -132,7 +151,7 @@ reke.
    \centering
 \caption{Kvadrat Lo Shu}
 \label{table:loshu}
-\begin{tabular}{|c|c|c|}\hline
+\begin{tabular}{|*{3}{c|}}\hline
    4 & 9 & 2 \\\hline
    3 & 5 & 7 \\\hline
    8 & 1 & 6 \\\hline
@@ -155,7 +174,7 @@ Lo Shu, vendar je vsako število povečano za 19.
 \centering
 \caption{Kvadrat Kubera-Kolam}
 \label{table:kubera}
-\begin{tabular}{|c|c|c|}\hline
+\begin{tabular}{|*{3}{c|}}\hline
    23 & 28 & 21 \\\hline
    22 & 24 & 26 \\\hline
    27 & 20 & 25 \\\hline      
@@ -200,6 +219,7 @@ simetričnih parov ($2+8+9+15$ in $3+5+12+14$), in še na nekaj drugih načinov.
 \centering     
 \caption{Dürerjev magični kvadrat}    
 \label{table:durer}     
+
 \begin{tabular}{|c|c|c|c|}\hline
    16 &  3 &  2 & 13 \\\hline
     5 & 10 & 11 &  8 \\\hline
@@ -256,13 +276,13 @@ in zato kvadrat ni normalen.
    \end{equation}
 \end{izrek}
 
-\begin{izrekdokaz}
+\begin{dokazovanje}
    V normalnem magičnem kvadratu reda $n$ je vsota vseh nastopajočih
    števil (glej \ref{table:mag3} na strani \pageref{table:mag3}) enaka
    $1+2+3+\dots+n^2=\sum_{k=1}^{n^2}k=\frac{1}{2}n^2(n^2+1)$. Ker imamo
    v kvadratu $n$ vrstic z enako vsoto, je vsota števil v eni vrstici
    enaka številu $\m(n)$. \eqref{eq:numbers}% sklica: eq:numbers, eq:numbers
-\end{izrekdokaz}
+\end{dokazovanje}
 
 Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
 $\m(n;A,D)$ za magični kvadrat, v katerem so nameščena števila
@@ -272,7 +292,7 @@ $A$, $A+D$, $A+2D$, \dots, $A+(n^2-1)D$, enaka \eqref{eq:mc}% sklic: eq:mc
       \m(n;A,D) = \frac{1}{2}n\left(2A+D(n^2-1)\right).
 \end{equation}
 
-Kvadratu v tabeli ?!? ustrezata konstanti $A=20$ in $D=1$.
+Kvadratu v tabeli \ref{table:sagrada} ustrezata konstanti $A=20$ in $D=1$.
 
 \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda $n$ odštejemo
@@ -280,8 +300,8 @@ Kvadratu v tabeli ?!? ustrezata konstanti $A=20$ in $D=1$.
       \pojem{komplementaren}.
 \end{definicija}
 
-Na primer, magičnemu kvadratu Lo Shu (glej tabelo ?!?) priredimo
-komplementarni kvadrat, prikazan v tabeli ?!?.
+Na primer, magičnemu kvadratu Lo Shu (glej tabelo \ref{table:loshu}) priredimo
+komplementarni kvadrat, prikazan v tabeli \ref{ttable:closhu}.
 %
 \begin{table}
 \centering
@@ -296,7 +316,7 @@ komplementarni kvadrat, prikazan v tabeli ?!?.
 
 
 Vidimo, da je dobljeni kvadrat moč dobiti iz kvadrata Lo Shu tudi z zasukom za
-180 stopinj okrog središča, kvadrat iz tabele ?!? pa je mogoče dobiti
+180 stopinj okrog središča, kvadrat iz tabele \ref{ttable:closhu} pa je mogoče dobiti
 iz kvadrata Lo Shu z zrcaljenjem preko sredinske vodoravne črte.
 
 Število različnih normalnih magičnih kvadratov
@@ -340,38 +360,24 @@ sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
 V tabelah \ref{table:mag5}, \ref{table:mag6} in \ref{table:mag9} so prikazani
 magični kvadrati redov 5, 6 in 9.
 
-\begin{table}
-\centering     
-\caption{Magični kvadrat reda 5}    
-\label{table:mag5}      
-\begin{tabular}{|c|c|c|c|c|}\hline
+\begin{magic}{5}
    17 & 24 &  1 &  8 & 15 \\\hline
    23 &  5 &  7 & 14 & 16 \\\hline
-    4 &  6 & 13 & 20 & 22 \\\hline
+   4 &  6 & 13 & 20 & 22 \\\hline
    10 & 12 & 19 & 21 &  3 \\\hline
    11 & 18 & 25 &  2 &  9 \\\hline     
-\end{tabular}
-\end{table}
+\end{magic}
 
-\begin{table}
-\centering  
-\caption{Magični kvadrat reda 6}    
-\label{table:mag6}      
-\begin{tabular}{|c|c|c|c|c|c|}\hline
-   6 & 32 &  3 & 34 & 35 &  1 \\\hline
+\begin{magic}{6}
+6 & 32 &  3 & 34 & 35 &  1 \\\hline
    7 & 11 & 27 & 28 &  8 & 30 \\\hline
   19 & 14 & 16 & 15 & 23 & 24 \\\hline
   18 & 20 & 22 & 21 & 17 & 13 \\\hline
   25 & 29 & 10 &  9 & 26 & 12 \\\hline
   36 &  5 & 33 &  4 &  2 & 31 \\\hline    
-\end{tabular}
-\end{table}
+\end{magic}
 
-\begin{table}
-\centering              
-\caption{Magični kvadrat reda 9}    
-\label{table:mag9}            
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline
+\begin{magic}{9}
    47 & 58 & 69 & 80 &  1 & 12 & 23 & 34 & 45 \\\hline
    57 & 68 & 79 &  9 & 11 & 22 & 33 & 44 & 46 \\\hline
    67 & 78 &  8 & 10 & 21 & 32 & 43 & 54 & 56 \\\hline
@@ -381,8 +387,8 @@ magični kvadrati redov 5, 6 in 9.
    26 & 28 & 39 & 50 & 61 & 72 & 74 &  4 & 15 \\\hline
    36 & 38 & 49 & 60 & 71 & 73 &  3 & 14 & 25 \\\hline
    37 & 48 & 59 & 70 & 81 &  2 & 13 & 24 & 35 \\\hline      
-\end{tabular}
-\end{table}
+
+\end{magic}
 
 
 

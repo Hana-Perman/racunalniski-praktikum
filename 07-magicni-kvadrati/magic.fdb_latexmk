@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex magic"] 1763405616.84126 "magic.aux" "magic.bbl" "magic" 1763405732.54213 0
+["bibtex magic"] 0 "magic.aux" "magic.bbl" "magic" 1763415974.99959 -1
   "./magic.bib" 1725027931 1019 99c3aefbef6333804bf69243a0c3bf27 ""
   "C:/Users/hanas/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/siam.bst" 1291864356 19403 812681d329611d2a1625ad7ae5186edc ""
-  "magic.aux" 1763405731 3008 6200b65b965241ca077a6f889122d0f1 "pdflatex"
+  "magic.aux" 1763415974 3008 6200b65b965241ca077a6f889122d0f1 "pdflatex"
   (generated)
   "magic.bbl"
   "magic.blg"
   (rewritten before read)
-["pdflatex"] 1763405730.8393 "c:/Users/hanas/OneDrive/Dokumenti/rp/racunalniski-praktikum/07-magicni-kvadrati/magic.tex" "magic.pdf" "magic" 1763405732.54305 0
+["pdflatex"] 1763415973.50643 "c:/Users/hanas/OneDrive/Dokumenti/rp/racunalniski-praktikum/07-magicni-kvadrati/magic.tex" "magic.pdf" "magic" 1763415975.00046 0
   "C:/Users/hanas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763397702 81760 910369822cd2d7c359b2482f4c0de4ca ""
   "C:/Users/hanas/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1708443740 24230155 a40ba07b44c68e91331e0693268d0586 ""
   "C:/Users/hanas/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -93,12 +93,12 @@
   "C:/Users/hanas/AppData/Local/Programs/MiKTeX/tex/latex/lm/ts1lmr.fd" 1430474546 1914 884882d7ebb0fd65cea93fca77ff6f5a ""
   "C:/Users/hanas/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/hanas/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/hanas/OneDrive/Dokumenti/rp/racunalniski-praktikum/07-magicni-kvadrati/magic.tex" 1763405730 13320 6e8c19a3f3f2cd042833c41198474acf ""
+  "c:/Users/hanas/OneDrive/Dokumenti/rp/racunalniski-praktikum/07-magicni-kvadrati/magic.tex" 1763415972 13282 b01513d0afaa5dd82be3b34645341fcf ""
   "durer.png" 1725027931 49307 c9692a8c361fe34567154cebb97ad5d5 ""
-  "magic.aux" 1763405731 3008 6200b65b965241ca077a6f889122d0f1 "pdflatex"
-  "magic.bbl" 1763405617 782 fedfb2f2c6af0d0f7ef7c67cfae247ad "bibtex magic"
-  "magic.tex" 1763405730 13320 6e8c19a3f3f2cd042833c41198474acf ""
-  "magic.toc" 1763405731 471 d5e050aecb8e0df389a8ef2a6bb055a7 "pdflatex"
+  "magic.aux" 1763415974 3008 6200b65b965241ca077a6f889122d0f1 "pdflatex"
+  "magic.bbl" 1763415068 782 fedfb2f2c6af0d0f7ef7c67cfae247ad "bibtex magic"
+  "magic.tex" 1763415972 13282 b01513d0afaa5dd82be3b34645341fcf ""
+  "magic.toc" 1763415974 471 d5e050aecb8e0df389a8ef2a6bb055a7 "pdflatex"
   "sagrada.png" 1725027931 118170 cc732cd2e989087e9820bfa6fd003959 ""
   "slika.pdf" 1716386704 7184 4c49b0abdbf8a2d3c38cc176cac49f8d ""
   (generated)
