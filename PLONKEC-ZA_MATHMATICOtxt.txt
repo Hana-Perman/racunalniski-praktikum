@@ -1,0 +1,97 @@
+FUNKCIJA DVEH SPREMENLJIVK:
+fn[x_, n_] := Sum[x^k/Factorial[k], {k, 0, n}]
+
+PLOT IN NJEGOVI DODATKI:
+Plot[Evaluate[Sum[x^k/k!, {k, 0, Infinity}]], {x, -3, 3}, 
+ AspectRatio -> Automatic, PlotRange -> {0, 7}, 
+ ExclusionsStyle -> {{Dashed, Red}}], 
+ Filling -> {1 -> {{2}, {LightBlue, Transparent}}}]]
+ 
+ -> ExclusionsStyle je za to, da narišeš pol
+ -> AspectRatio je zato, da naštimaš razmerje med x in y osjo
+ -> Plotrange določi med, katerimi y nariše graf
+ -> Če za plot napišeš ; se funkcija ne bo prikazala, lahko uporabis tudi
+ Show
+ -> Filing pobarva območje med dvema funkcijama na grafu 
+ 
+ 
+PARAMETRIC PLOT: riše krivulje
+
+g[t_] := {((3 - t)*Sin[t])/(t + 1), Cos[t] Sin[2 t]}
+ParametricPlot[g[x], {x, 0, 5}]
+
+CONTOURPLOT: 
+ContourPlot[Abs[x]^(2/3) + Abs[y]^(2/3) == 1, {x, -1, 1}, {y, -1, 1}]
+Nariše vse točke kjer je vrednost izraza enaka.
+
+REGION PLOT:
+RegionPlot[pogoj, {x, xmin, xmax}, {y, ymin, ymax}]
+
+
+MANIPULATE: ko je funkcija odvisna od npr x in a, in hočeš drsnik za a
+Manipulate[
+ Plot[{k x + n, -1/k (x - x0) + y0}, {x, -10, 10},  
+  Epilog -> {PointSize[Large], Point[{x0, y0}]}, 
+  AspectRatio -> Automatic ], {x0, -5, 5}, {y0, -5, 5}, {k, -5, 
+  5}, {n, -5, 5}]
+  
+  ->epilog nariše točko
+ 
+
+-> Solve poišče ničle polinoma ipd. SOLVE lahko dodamo še parameter reals,
+ki vrne samo realne parametre, NSolve numerično poišče ničle polinoma
+Solve uporabiš, ko imaš končno rešitev
+Solve lahko reši tudi sistem enačb npr. 
+Solve[{s == h + 3, m == 23 + s, m - 6 == (s - 6) + (h - 6)}]
+-> Reduce se uporablja, ko pričakuješ neskončno rešitev, želiš pogoje
+pod katerimi rešitve obstajajo, rešuješ neenakosti, splošne rešitve, 
+delaš z domenami
+
+->Factor faktorizira izraz
+->Expand lowkey naredi lih obratno
+-> DEnominator, ti vrne imenovalec ulomka
+-> Funkcija N vrne numerično vrednost izraza
+-> Simplyfy poenostavi izraza
+-> Factor??
+
+-> D naredi odvod
+-> Limit je "navadna" limita
+-> LEVA limita Limit[funkcija, x->a, Direction->1]
+-> DESNA limita ima >Direction -1
+-> FindRoot je namenjen numeričnemu reševanju enačb
+primer: FindRoot[g[t] == g[s], {t, 0}, {s, 3}]
+-> Zapis g[t] /. x pomeni, da uporabimo g[t] na x, npr x:= t->5
+
+-> E je eulerjevo število
+-> Pi je pi
+
+VEKTORJI
+skalarni produkt: v1.v2
+vektorski produkt: Cross[v1,v2]
+ravnina, ki vsebuje {1,1,1} in ima normalo v smeri vektorskega produkta
+Solve[{x, y, z} . V == {1, 1, 1} . V]
+
+MATRIKE, LASTNI VEKTORJI, LASTNE VREDNOSTI
+M = {{9, 2, -3}, {3, 2, 1}, {6, 4, -1}}
+Det[M]
+vecs = Eigenvectors[M]  ->to je lastni vektor
+vals = Eigenvalues[M]	->to so lastne vrednosti
+DiagonalizableMatrixQ[M] ->ali je diagonazibilna
+R = DiagonalMatrix[vals] ->diagonalna matrika
+P = Transpose[vecs] ->transponiranka
+Q = Inverse[P] ->inverzna matrika
+Simplify[M == P . R . Q] 
+
+GRŠKE ČRKE V MATHEMATICI
+| Črka | Tipkanje         |
+| ---- | ---------------- |
+| α    | `Esc alpha Esc`  |
+| β    | `Esc beta Esc`   |
+| γ    | `Esc gamma Esc`  |
+| Δ    | `Esc Delta Esc`  |
+| λ    | `Esc lambda Esc` |
+| π    | `Esc pi Esc`     |
+| σ    | `Esc sigma Esc`  |
+| Ω    | `Esc Omega Esc`  |
+
+

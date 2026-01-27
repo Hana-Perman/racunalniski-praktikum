@@ -1,0 +1,59 @@
+LATEX-IZPISKI
+
+KAKO SE NAREDI NOVO OKOLJE:
+{
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+}
+
+Theromstyle ti pove kakšne bodo črke besedila ipd. v tem okolju
+Prvi oklepaj {definicija} nam pove kako se bomo sklicevali na to okolje
+(sklic bo \definicija) drugi oklepaj pa nam pove, kaj se bo izpisalo
+v besedilu 
+
+KAKO DEFINIRAMO NOVE UKAZE?
+\newcommand{\p}{\mathbb P}
+z \p se skličemo na ta ukaz, ukaz izpiše pisani P
+
+\newcommand{\lam}[1]{\lambda_{#1}(p)}
+\lam je sklic, [1] nam pove koliko argumentov sprejme, 
+{\lambda_{#1}(p)} pove da se bo izpisala grška lambda, podpisan prvi argument, 
+ki ga je sprejela ta funkcija (tudi edini) in pač (p)
+
+KAKO NAPIŠEMO NASLOV? 
+
+\title{Dinamika demokratskih izborov}
+\author{Matej Rojec}
+\date{2.2.2025}
+\begin{document}
+
+\begin{document}
+
+\maketitle
+
+KAKO VKLJUČIMO SLIKE?
+\begin{figure}[ht!]
+    \centering   
+\begin{subfigure}{0.4\textwidth}
+    \includegraphics[width=\textwidth]{a515.png}
+    \caption{Prevojne točke Galamovega modela s petimi enakomerno porazdeljenimi skupinami za različne vrednosti $k$.}
+    \label{fig:a515}
+\end{subfigure}
+
+...tukaj bi lahko blo še več subfigures...
+
+\end{figure}
+
+KAKO SE VKLJUČI BIBLIOGRAFIJO?
+% Literatura
+\bibliographystyle{plain}
+\bibliography{viri}
+
+KAKO SE SKLICUJEMO?
+moramo dat \label na tisti objekt na katerega se želimo sklicati
+potem moramo napisati \ref ali \eqref (\eqref doda oglate oklepaje)
+
+NA KAJ JE TREBA PAZIT:
+npr. align* ne dovoljuje številčenja, zato če dam tja notr label ne bo 
+delal.
+align številči enačbe medtem ko align* ne številči enačb.
